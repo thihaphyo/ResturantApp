@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1e1c2a</color>
+    <color name="colorPrimaryTrans">#4D1e1c2a</color>
+    <color name="colorPrimaryDark">#1e1c2a</color>
+    <color name="colorAccent">#ff993a</color>
+    <color name="white">#FFFFFF</color>
+    <color name="accent">#5d74f4</color>
+    <color name="balck">#000000</color>
+</resources>
