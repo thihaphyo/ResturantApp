@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252331"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="276dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/vp_news_details_image"
+                android:layout_width="match_parent"
+                android:layout_height="276dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food_one" />
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-80dp"
+        app:layout_anchor="@id/appbar_layout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/v_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:background="#252331" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_large"
+                    android:elevation="8dp"
+                    app:cardBackgroundColor="#373447"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="190dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_medium_3"
+                            android:layout_marginTop="@dimen/margin_medium_3"
+                            android:layout_marginRight="@dimen/margin_medium_3"
+                            android:text="Pickle, jam and chutney"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_heading_2x"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/iv_send"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignTop="@+id/tv_title"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_marginRight="@dimen/margin_xlarge"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:elevation="8dp"
+                            android:src="@drawable/send" />
+
+                        <TextView
+                            android:id="@+id/tv_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_title"
+                            android:layout_alignLeft="@+id/tv_title"
+                            android:layout_alignRight="@+id/iv_send"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:lineSpacingMultiplier="1.3"
+                            android:text="@string/string_desc"
+                            android:textColor="#918ea1"
+                            android:textSize="@dimen/text_regular" />
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_controls"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_desc"
+                            android:layout_alignLeft="@+id/tv_desc"
+                            android:layout_alignRight="@+id/tv_desc"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/iv_time"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:elevation="8dp"
+                                    android:src="@drawable/time" />
+
+                                <TextView
+                                    android:id="@+id/tv_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iv_time"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/margin_medium"
+                                    android:text="10am-5pm"
+                                    android:textColor="#747182" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/margin_medium">
+
+                                <ImageView
+                                    android:id="@+id/iv_distance"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:elevation="8dp"
+                                    android:src="@drawable/location" />
+
+                                <TextView
+                                    android:id="@+id/tv_distance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iv_distance"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/margin_medium"
+                                    android:text="1.5 Km"
+                                    android:textColor="#747182" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/margin_medium">
+
+                                <ImageView
+                                    android:id="@+id/iv_map"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:elevation="8dp"
+                                    android:src="@drawable/map" />
+
+                                <TextView
+                                    android:id="@+id/tv_map"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iv_map"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/margin_medium"
+                                    android:text="Map View"
+                                    android:textColor="#747182" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/margin_medium">
+
+                                <ImageView
+                                    android:id="@+id/iv_devilery"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:elevation="8dp"
+                                    android:src="@drawable/delivery" />
+
+                                <TextView
+                                    android:id="@+id/tv_devilery"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iv_devilery"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/margin_medium"
+                                    android:text="Delivery"
+                                    android:textColor="#747182" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                        <android.support.design.widget.TabLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_controls"
+                            android:layout_alignLeft="@+id/ll_controls"
+                            android:layout_alignRight="@+id/ll_controls"
+                            android:layout_marginTop="@dimen/margin_medium_2"
+                            android:layout_marginBottom="@dimen/margin_medium_2"
+                            app:tabIndicatorColor="@color/white"
+                            app:tabTextColor="@color/white">
+
+                            <android.support.design.widget.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Monday" />
+
+                            <android.support.design.widget.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tuesday" />
+
+                            <android.support.design.widget.TabItem
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Wednesday" />
+                        </android.support.design.widget.TabLayout>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

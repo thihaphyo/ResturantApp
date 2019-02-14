@@ -1,6 +1,7 @@
 package com.padc.resturantapp.activities;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -70,20 +71,7 @@ public class MainActivity extends AppCompatActivity implements FoodListDelegate 
     @Override
     public void onClickFood() {
 
-        final AlertDialog builder = new AlertDialog.Builder(this)
-                .create();
-        builder.setTitle("Alert");
-        builder.setMessage("onClick Triggered");
-        builder.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        builder.dismiss();
-
-                    }
-                });
-
-        builder.show();
+        Intent intent = FoodDetailsActivity.newIntent(this);
+        startActivity(intent);
     }
 }
